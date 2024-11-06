@@ -185,7 +185,7 @@
     position: relative;
     padding: 4rem 2rem;
     text-align: center;
-    background-image: url('../images/aboutuspackground.jpg');
+    background-image: url('./images/aboutuspackground.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -280,7 +280,7 @@
 
 /* Services Overview Section */
 .services-overview {
-    background-image: url('../images/3dogs.jpg');
+    background-image: url('./images/3dogs.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -425,7 +425,7 @@ background-color: #f8f9fa;
     position: relative;
     padding: 4rem 2rem;
     text-align: center;
-    background-image: url('../images/puppies.jpg');
+    background-image: url('./images/puppies.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -505,7 +505,7 @@ label {
 
 /* Contact Header Section */
 .contact-header {
-    background-image: url('../images/contactbackground.jpg');
+    background-image: url('./images/contactbackground.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -581,7 +581,7 @@ label {
 
 /* Contact Form Section */
 .contact-form {
-    background-image: url(../images/contact2background.jpg);
+    background-image: url(./images/contact2background.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
