@@ -2,7 +2,7 @@
 /* Hero Section */
 .hero {
     position: relative;
-    background-image: url('../images/pexels-arkay-768552413-29097725.jpg');
+    background-image: url('./images/pexels-arkay-768552413-29097725.jpg');
     background-size: cover;
     background-position: center;
     height: 85vh;
@@ -113,7 +113,7 @@
 /* Why Choose Us Section */
 .why-choose-us {
     position: relative;
-    background-image: url('../images/pexels-miami302-19225662.jpg');
+    background-image: url('./images/pexels-miami302-19225662.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
