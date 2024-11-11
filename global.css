@@ -218,3 +218,14 @@ button:hover {
     font-size: 0.9rem;
     color: #ccc;
 }
+
+.copyright a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+:hover .copyright a {
+    color: #ff59f0;
+
+}
