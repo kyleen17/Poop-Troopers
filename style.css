@@ -221,6 +221,37 @@
     font-size: 1.2rem;
     line-height: 1.8;
 }
+/* 
+Game */
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: #4ff372;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 4rem 0;
+    font-size: 1.2rem;
+    
+}
+
+/* Remove cursor style from the body */
+body {
+    cursor: auto;
+}
+
+/* Game container cursor style */
+.game-container {
+    cursor: url('./images/point_scan_24dp_000000_FILL0_wght400_GRAD0_opsz24.png') 25 25, auto;
+}
+
+/* Poop image cursor style */
+.poop-image {
+    cursor: url('./images/poopfacebook.png') 25 25, auto;
+}
+
 
 /* About Us Page */
 /* Meet the Troopers Section */

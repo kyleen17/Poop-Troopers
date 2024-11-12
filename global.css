@@ -24,14 +24,13 @@ nav {
 nav h1 {
     margin: 0;
     font-size: 2rem;
-    font-family: black ops one;
+    font-family: 'Black Ops One', sans-serif;
 }
 
 .logo {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 1rem;
 }
 
 .logo img {
@@ -44,10 +43,6 @@ nav h1 {
 
 .logo img:hover {
     transform: scale(1.1);
-}
-
-.logo img:active {
-    transform: scale(1.2);
 }
 
 .nav-links {
@@ -66,6 +61,46 @@ nav h1 {
 .nav-links li a:hover {
     color: #ffd700;
 }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 2;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1982c4;
+        position: fixed; /* Change to fixed to keep it above content */
+        top: 60px; /* Adjust this value to avoid overlapping with the header */
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        z-index: 999; /* High enough to stay above other content */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1000; /* Keep hamburger above nav links */
+    }
+}
+
 
 
 
@@ -229,3 +264,5 @@ button:hover {
     color: #ff59f0;
 
 }
+
+

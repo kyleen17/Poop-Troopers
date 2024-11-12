@@ -1,3 +1,21 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const navItems = document.querySelectorAll('.nav-links li a');
+
+    // Toggle hamburger menu
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close the menu when clicking on a link
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+});
+
 // JavaScript to create the instant quote popup
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -112,3 +130,24 @@ style.textContent =`
 `;
 
 document.head.appendChild(style);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const gameContainer = document.getElementById('game');
+    const numPoops = 10; // Number of poops to display
+
+    for (let i = 0; i < numPoops; i++) {
+        const poop = document.createElement('img');
+        poop.src = './images/scaredpoop.png';
+        poop.alt = 'Poop';
+        poop.classList.add('poop-image');
+        poop.style.top = Math.random() * 80 + '%'; // Random top position
+        poop.style.left = Math.random() * 80 + '%'; // Random left position
+        
+        // Add click event to remove poop
+        poop.addEventListener('click', () => {
+            gameContainer.removeChild(poop);
+        });
+        
+        gameContainer.appendChild(poop);
+    }
+});
