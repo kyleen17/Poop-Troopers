@@ -99,6 +99,9 @@ nav h1 {
     display: flex;
     z-index: 1000; /* Keep hamburger above nav links */
   }
+  .logo h1 {
+    display: none;
+  }
 }
 
 /* Footer Section */
