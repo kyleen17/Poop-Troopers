@@ -130,24 +130,62 @@ style.textContent =`
 `;
 
 document.head.appendChild(style);
-
 document.addEventListener('DOMContentLoaded', () => {
     const gameContainer = document.getElementById('game');
+    const timerElement = document.getElementById('timer');
+    const startButton = document.getElementById('start-button');
     const numPoops = 10; // Number of poops to display
+    let timeLeft = 30; // Time in seconds
+    let poopCount = numPoops; // Track remaining poops
+    let timerInterval;
 
-    for (let i = 0; i < numPoops; i++) {
-        const poop = document.createElement('img');
-        poop.src = './images/scaredpoop.png';
-        poop.alt = 'Poop';
-        poop.classList.add('poop-image');
-        poop.style.top = Math.random() * 80 + '%'; // Random top position
-        poop.style.left = Math.random() * 80 + '%'; // Random left position
-        
-        // Add click event to remove poop
-        poop.addEventListener('click', () => {
-            gameContainer.removeChild(poop);
-        });
-        
-        gameContainer.appendChild(poop);
+    // Start game when the button is clicked
+    startButton.addEventListener('click', () => {
+        startButton.style.display = 'none';
+        timerElement.style.display = 'block';
+        startTimer();
+        createPoops();
+    });
+
+    // Create poop elements
+    function createPoops() {
+        for (let i = 0; i < numPoops; i++) {
+            const poop = document.createElement('img');
+            poop.src = './images/scaredpoop.png';
+            poop.alt = 'Poop';
+            poop.classList.add('poop-image');
+            poop.style.top = Math.random() * 80 + '%'; // Random top position
+            poop.style.left = Math.random() * 80 + '%'; // Random left position
+            
+            // Add click event to remove poop
+            poop.addEventListener('click', () => {
+                gameContainer.removeChild(poop);
+                poopCount--;
+                if (poopCount === 0) {
+                    clearInterval(timerInterval);
+                    alert(`You win! Your time was ${30 - timeLeft}s.`);
+                }
+            });
+            
+            gameContainer.appendChild(poop);
+        }
+    }
+
+    // Timer countdown
+    function startTimer() {
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = `Time Left: ${timeLeft}s`;
+
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                if (poopCount > 0) {
+                    alert("Time's up! Better luck next time!");
+                }
+            }
+        }, 1000);
     }
 });
+
+        gameContainer.appendChild(poop);
+
