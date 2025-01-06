@@ -38,13 +38,13 @@ function createQuotePopup() {
     
     // Add content to the popup
     const message = document.createElement('h2');
-    message.textContent = 'Your Instant Quote is Ready!';
+    message.textContent = 'Your Quote is being Prepared!';
     
     const details = document.createElement('p');
-    details.textContent = 'Thank you for requesting a quote! We will get back to you shortly. In the meantime, why not sign up for our services now?';
+    details.textContent = 'Thank you for requesting a quote! We will get back to you shortly. ';
     
     const signupButton = document.createElement('button');
-    signupButton.textContent = 'Sign Up Now';
+    signupButton.textContent = 'Thank You';
     signupButton.classList.add('signup-button');
     
     const closeButton = document.createElement('button');
